@@ -6,16 +6,22 @@ jobs:
     first_job:
         runs-on: ubuntu-latest
         steps:
-            - name: Welcome Message
-              run: echo "Helo from Github Actions"
-
-            - name: List Files
-              run: ls
-
             - name: Checkout REPO
               uses: actions/checkout@v4
 
-            - name: Cat Readme
-              run: cat README.md
+            - name: Welcome message, list files and cat Readme
+              run: |
+                   echo "Helo from Github Actions"
+                   ls -ltra
+                   cat README.md
+
+            - name: Generate ASCII Artwork
+              run: cowsay -f dragon "Run for cover, I am a DRAGON...RAWR" >> dragon.txt
+
+            # - name: List Files
+            #   run: ls
+
+            # - name: Cat Readme
+            #   run: cat README.md
 
               
