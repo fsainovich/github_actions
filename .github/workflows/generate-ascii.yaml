@@ -11,10 +11,10 @@ jobs:
 
             - name: List Repo files
               run: ls -latr
-              
+
             - name: Executing shell script
               run: ./ascii-script.sh
-
+              
             # - name: Install conwsay
             #   run: sudo apt-get install cowsay -y
 
